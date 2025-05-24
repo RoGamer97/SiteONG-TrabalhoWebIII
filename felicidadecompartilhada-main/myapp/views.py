@@ -12,6 +12,7 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import ContatoForm
 
 from .models import RelatorioAnual
+from myapp.models import QRCodePix
 
 
 
@@ -237,7 +238,9 @@ def eventos(request):
     eventos = Evento.objects.all()
     return render(request, "app/eventos.html", {"idBody": "eventos", "eventos":eventos})
 
-
+def pix_qrcode(request):
+    qrcodes = QRCodePix.objects.all()
+    return render(request, "app/doacao.html", {"idBody": "doacao", "qrcodes": qrcodes})
 
 def area_restrita(request):
   if request.user.is_authenticated:
@@ -255,8 +258,6 @@ def area_restrita(request):
         else:
             messages.error(request, 'Usuário ou senha inválidos.')
   return render(request, "app/area-restrita.html", {"idBody": "area-restrita"})
-
-
 
 def custom_404(request, exception):
     return render(request, "app/404.html", {"idBody": "doacao"})

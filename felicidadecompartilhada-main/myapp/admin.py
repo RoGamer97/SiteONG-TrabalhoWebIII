@@ -1,6 +1,7 @@
 from django.contrib import admin
 from .models import Instituicao, Atividade
 from .models import RelatorioAnual
+from .models import QRCodePix
 
 
 class Filial(admin.ModelAdmin):
@@ -32,5 +33,5 @@ admin.site.index_title = "Painel de Controle Felicidade Compartilhada"
 
 admin.site.register(Atividade)
 admin.site.register(RelatorioAnual)
-
+admin.site.register(QRCodePix)
 

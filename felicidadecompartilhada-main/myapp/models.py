@@ -51,7 +51,7 @@ class Instituicao(models.Model):
     
 
 
-
+# REMOVIDO
 """class Participacao(models.Model):
     nome = models.ForeignKey(Crianca, on_delete=models.PROTECT)
     atividade = models.ForeignKey(Atividade, on_delete=models.PROTECT)
@@ -78,3 +78,16 @@ class RelatorioAnual(models.Model):
 
     def __str__(self):
         return f"Relatório {self.ano}"
+        
+            
+class QRCodePix(models.Model):
+    nome = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    imagem = models.ImageField(upload_to='doacao/')
+    
+    def __str__(self):
+        return self.nome
+    
+    class Meta:
+        verbose_name = "Doação Pix QR Code"
+        verbose_name_plural = "Doação Pix QR Code"

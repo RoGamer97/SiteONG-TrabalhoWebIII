@@ -117,7 +117,7 @@ Doar {% endblock %} {% block content %}
 
 
 
-
+ <!-- Pix QR Code do Felicidade Compartilhada não está ligada no Banco de Dados, já o das outras ONGs sim (Ro) -->
 <div class="fundo-valores">
   <div class="donation-form">
     <h2>Doe para a Felicidade Compartilhada.</h2>
@@ -127,45 +127,20 @@ Doar {% endblock %} {% block content %}
   </div>
 </div>
 
-
-
-
-
+{% if qrcodes %}
 <div class="carousel-container">
-   <h3>Você também pode doar para:</h3>
+  <h3>Você também pode doar para:</h3>
   <div class="carousel-track">
-    <div class="qrcode-card">
-      <h4>Abrigo Cabi</h4>
-      <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="Abrigo Cabi">
-      <h4 class="pix-email">aguardando@chave.com</h4>
-    </div>
-    <div class="qrcode-card">
-      <h4>Casa Beija-Flor</h4>
-      <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="Casa Beija-Flor">
-      <h4 class="pix-email">aguardando@chave.com</h4>
-    </div>
-    <div class="qrcode-card">
-      <h4>Instituto ABBA</h4>
-      <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="Instituto ABBA">
-      <h4 class="pix-email">aguardando@chave.com</h4>
-    </div>
-     <div class="qrcode-card">
-      <h4>Abrigo Fundação Santa Bárbara</h4>
-      <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="Fundação Santa Barbara">
-      <h4 class="pix-email">aguardando@chave.com</h4>
-    </div>
-
-     <div class="qrcode-card">
-      <h4>Casa de Acolhimento e Cidadania</h4>
-      <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="CAC">
-      <h4 class="pix-email">aguardando@chave.com</h4>
-    </div>
-
-    <div class="qrcode-card">
-      <h4>Casa do Idoso para Todos os Povos</h4>
-      <img src="{% static 'img/QRCODE_Casa_De_Idosos_Todos_Os_Povos.png' %}" alt="CAC">
-      <h4 class="pix-email">acitp2010@gmail.com</h4>
-    </div>
+    {% for ong in qrcodes %}
+      <div class="qrcode-card">
+        <h4>{{ ong.nome }}</h4>
+        <img src="{{ ong.imagem.url }}" alt="{{ ong.nome }}">
+        <h4 class="pix-email">{{ ong.email }}</h4>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
 
     
     <!-- mais cards -->
