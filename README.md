@@ -19,12 +19,12 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 - 🔄 **Atualização de Dados:** Manter o registro dos voluntários sempre atualizado.
 - ❌ **Exclusão de Registros:** Remover registros de voluntários inativos ou desatualizados.
 - 🔍 **Consulta Rápida:** Localizar voluntários e seus históricos de participações na ONG.
-- 
+- 💰 **Possibilidade de usuários realizarem doações via PIX.
 
 ## Tecnologias Utilizadas
 
 - **Django** como framework principal.
-- **MySQL** para gerenciamento do banco de dados.
+- **DbSqlite** para gerenciamento do banco de dados.
 
 ## Como Rodar
 
@@ -34,7 +34,7 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
     ```
 2. Acesse o diretório do projeto:
     ```bash
-    cd felicidade-compartilhada
+    cd felicidadecompartilhada-main
     ```
 3. Instale as dependências necessárias:
     ```bash
