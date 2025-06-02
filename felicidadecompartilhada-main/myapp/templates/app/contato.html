@@ -36,26 +36,40 @@
       <div class="form-contato" data-aos="fade-left" data-aos-delay="600">
         <h1 style="margin-bottom: 20px">Preencha o formulário abaixo para que possamos ajudar com suas dúvidas!</h1>
        
-        <form action="" method="post">
+	   <!-- formulario modificado pra ser usado com JS. JS ainda nao esta presente-->
+        <form id="formulario" action="" method="post">
           {% csrf_token %}
-          
-          
+		<div>
+		  <label for="nome">Nome</label>
+		  <input type="text" name="nome" id="nome" />
+		  <div class="error">
+			<p></p>
+		  </div>
+		</div>
 
-       {% for field in form %}
-    <div>
-        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-        {{ field }}
-        {% if field.errors %}
-            <div class="error">
-                {% for error in field.errors %}
-                    <p>{{ error }}</p>
-                {% endfor %}
-            </div>
-        {% endif %}
-    </div>
-  {% endfor %}
+		<div>
+		  <label for="email">Email</label>
+		  <input type="email" name="email" id="email" />
+		  <div class="error">
+			<p></p>
+		  </div>
+		</div>
 
+		<div>
+		  <label for="idade">Idade</label>
+		  <input type="number" name="idade" id="idade" />
+		  <div class="error">
+			<p></p>
+		  </div>
+		</div>
 
+		<div>
+		  <label for="telefone">Telefone</label>
+		  <input type="tel" name="telefone" id="telefone" maxlength="11" />
+		  <div class="error">
+			<p></p>
+		  </div>
+		</div>
           <div>
             <button type="submit">
               Enviar
@@ -71,7 +85,6 @@
 
 
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="{% static 'js/animation.js' %}"></script>
-  
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="{% static 'js/animation.js' %}"></script>
 {% endblock %}
