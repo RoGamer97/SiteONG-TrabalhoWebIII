@@ -15,15 +15,42 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 
 ## Funcionalidades do Projeto
 
-Work in Progress...
+- 📋 **Cadastro de Voluntários:** Armazenar e visualizar informações dos beneficiários atendidos.
+- 🔄 **Atualização de Dados:** Manter o registro dos voluntários sempre atualizado.
+- ❌ **Exclusão de Registros:** Remover registros de voluntários inativos ou desatualizados.
+- 🔍 **Consulta Rápida:** Localizar voluntários e seus históricos de participações na ONG.
+- 💰 **Possibilidade de usuários realizarem doações via PIX.
 
 ## Tecnologias Utilizadas
 
-Work in Progress...
+- **Django** como framework principal.
+- **DbSqlite** para gerenciamento do banco de dados.
 
 ## Como Rodar
 
-Work in Progress...
+1. Clone o repositório:
+    ```bash
+    https://github.com/RoGamer97/SiteONG-TrabalhoWebIII_Thereza
+    ```
+2. Acesse o diretório do projeto:
+    ```bash
+    cd felicidadecompartilhada-main
+    ```
+3. Instale as dependências necessárias:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4. Configure as variáveis de ambiente para conexão com o banco de dados.
+
+5. Execute as migrações:
+    ```bash
+    python manage.py migrate
+    ```
+
+6. Inicie o servidor:
+    ```bash
+    python manage.py runserver
+    ```
 
 # Equipe
 
