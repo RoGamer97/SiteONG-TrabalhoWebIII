@@ -1,7 +1,3 @@
-## README TEMPORÁRIO! ALTERAÇÕES SERÃO FEITAS
-
-Work in Progress...
-
 # Sobre a ONG Felicidade Compartilhada
 
 A ONG Felicidade Compartilhada é uma organização social que nasceu em 2013 com o objetivo de criar oportunidades para a sociedade conhecer instituições carentes e oferecer tempo e amor aos abrigados. A organização se dedica a incentivar, instruir, capacitar e motivar pessoas a se tornarem voluntárias em seus projetos. 
@@ -19,7 +15,7 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 - 🔄 **Atualização de Dados:** Manter o registro dos voluntários sempre atualizado.
 - ❌ **Exclusão de Registros:** Remover registros de voluntários inativos ou desatualizados.
 - 🔍 **Consulta Rápida:** Localizar voluntários e seus históricos de participações na ONG.
-- 💰 **Possibilidade de usuários realizarem doações via PIX.
+- 💰 **Doações Online:** Possibilidade de usuários realizarem doações via PIX.
 
 ## Tecnologias Utilizadas
 
@@ -61,4 +57,8 @@ A equipe é composta por alunos que colaboraram no desenvolvimento deste projeto
 - **Pierre Batista do Amaral**  
 - **Guilherme Ornellas Chagas**  
 - **Wilson da Silva Prata Junior**
+
+## Agradecimento especial a 
+- **Aron Barbosa**
+- **Pedro Azeredo**
 
