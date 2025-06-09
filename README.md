@@ -22,21 +22,33 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 - **Django** como framework principal.
 - **DbSqlite** para gerenciamento do banco de dados.
 
-## Como Rodar
+## Como Executar
+
 
 1. Clone o repositório:
     ```bash
-    https://github.com/RoGamer97/SiteONG-TrabalhoWebIII_Thereza
+    git clone https://github.com/RoGamer97/SiteONG-TrabalhoWebIII.git
     ```
+
 2. Acesse o diretório do projeto:
     ```bash
-    cd felicidadecompartilhada-main
+    cd SiteONG-TrabalhoWebIII/felicidadecompartilhada-main
     ```
-3. Instale as dependências necessárias:
+
+3. **Ative o ambiente virtual já criado:**
+    - No Windows (cmd ou PowerShell):
+      ```bash
+      .\venv\Scripts\activate
+      ```
+    - No Linux/Mac:
+      ```bash
+      source venv/bin/activate
+      ```
+
+4. Instale as dependências (se ainda não instalou):
     ```bash
     pip install -r requirements.txt
     ```
-4. Configure as variáveis de ambiente para conexão com o banco de dados.
 
 5. Execute as migrações:
     ```bash
@@ -58,7 +70,9 @@ A equipe é composta por alunos que colaboraram no desenvolvimento deste projeto
 - **Guilherme Ornellas Chagas**  
 - **Wilson da Silva Prata Junior**
 
-## Agradecimento especial a 
+## Agradecimento especial 
+
+Vocês que foram essenciais para que pudéssemos construir algo que realmente fizesse a diferença.
+
 - **Aron Barbosa**
 - **Pedro Azeredo**
-
