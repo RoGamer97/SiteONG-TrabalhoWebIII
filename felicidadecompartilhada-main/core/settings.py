@@ -135,6 +135,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # Adicionando o diretório estático onde os arquivos estão armazenados
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
 ]
