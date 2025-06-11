@@ -32,30 +32,44 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 
 2. Acesse o diretório do projeto:
     ```bash
-    cd SiteONG-TrabalhoWebIII/felicidadecompartilhada-main
+    cd SiteONG-TrabalhoWebIII/ONG_FelicidadeCompartilhada
     ```
 
-3. **Ative o ambiente virtual já criado:**
-    - No Windows (cmd ou PowerShell):
+3. Crie o ambiente virtual
+ 
+    **IMPORTANTE:** Faça este passo apenas na **primeira vez** que for rodar o projeto!
       ```bash
-      .\venv\Scripts\activate
+      python -m venv venv
       ```
+      
+4. Ative o ambiente virtual:
+    - No Windows (cmd ou PowerShell):
+      ```
+      \venv\Scripts\activate
+      ```
+      
     - No Linux/Mac:
       ```bash
       source venv/bin/activate
       ```
-
-4. Instale as dependências (se ainda não instalou):
+      
+5. Instale as dependências
+   
+   **IMPORTANTE:** Faça este passo apenas na **primeira vez** que for rodar o projeto!
+   
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Execute as migrações:
+6. Execute as migrações:
+
+    **IMPORTANTE:** Faça este passo apenas na **primeira vez** que for rodar o projeto!
+   
     ```bash
     python manage.py migrate
     ```
 
-6. Inicie o servidor:
+7. Inicie o servidor:
     ```bash
     python manage.py runserver
     ```
