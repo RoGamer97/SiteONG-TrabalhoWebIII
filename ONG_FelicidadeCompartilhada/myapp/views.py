@@ -12,8 +12,8 @@ from django.contrib.auth import authenticate, login, logout
 from .forms import ContatoForm
 
 from .models import RelatorioAnual
-from myapp.models import QRCodePix
-
+from myapp.models import QRCodePixFelicidade
+from myapp.models import QRCodePixParceiros
 
 
 # Create your views here.
@@ -238,9 +238,28 @@ def eventos(request):
     eventos = Evento.objects.all()
     return render(request, "app/eventos.html", {"idBody": "eventos", "eventos":eventos})
 
-def pix_qrcode(request):
-    qrcodes = QRCodePix.objects.all()
-    return render(request, "app/doacao.html", {"idBody": "doacao", "qrcodes": qrcodes})
+def pix_qrcodes(request):
+    qrcodes_felicidade = QRCodePixFelicidade.objects.all()
+    qrcode_felicidade = qrcodes_felicidade.first()
+
+    qrcodes_parceiros = QRCodePixParceiros.objects.all()
+
+    qrcodes = []
+
+    for qr in qrcodes_parceiros:
+        qrcodes.append({
+            "nome": qr.nome,
+            "email": qr.email,
+            "imagem": qr.imagem,
+            "tipo": "parceiros"
+        })
+
+    return render(request, "app/doacao.html", {
+        "idBody": "doacao",
+        "qrcode_felicidade": qrcode_felicidade,
+        "qrcodes": qrcodes
+    })
+
 
 def area_restrita(request):
   if request.user.is_authenticated:

@@ -45,7 +45,7 @@ O objetivo deste projeto é desenvolver uma aplicação web para a ONG, com intu
 4. Ative o ambiente virtual:
     - No Windows (cmd ou PowerShell):
       ```
-      \venv\Scripts\activate
+      .\venv\Scripts\activate
       ```
       
     - No Linux/Mac:

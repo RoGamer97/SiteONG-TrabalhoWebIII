@@ -120,9 +120,13 @@ Doar {% endblock %} {% block content %}
 <div class="fundo-valores">
   <div class="donation-form">
     <h2>Doe para a Felicidade Compartilhada.</h2>
-    <img src="{% static 'img/QRCODE_Felicidade_Compartilhada.png' %}" alt="QR Code de Doação" class="qrcode-img">
-    <p>Abra o aplicativo do seu banco e escaneie o código acima.</p>    
-    <h3> Chave Pix: felicidadecompartilhada.iza@gmail.com</h3>   
+    {% if qrcode_felicidade %}
+      <img src="{{ qrcode_felicidade.imagem.url }}" alt="QR Code de Doação" class="qrcode-img">
+      <p>Abra o aplicativo do seu banco e escaneie o código acima.</p>    
+      <h3>Chave Pix: {{ qrcode_felicidade.email }}</h3>
+    {% else %}
+      <p>Nenhum QR Code disponível no momento.</p>
+    {% endif %}
   </div>
 </div>
 

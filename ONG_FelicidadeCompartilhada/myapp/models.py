@@ -80,14 +80,34 @@ class RelatorioAnual(models.Model):
         return f"Relatório {self.ano}"
 
 
-class QRCodePix(models.Model):
+class QRCodePixFelicidade(models.Model):
+    nome = models.CharField(max_length=200)
+    email = models.CharField(max_length=200, primary_key=True)
+    imagem = models.ImageField(upload_to='doacaoFelicidade/')
+
+    def __str__(self):
+        return self.email
+
+    def clean(self):
+        if not self.pk and QRCodePixFelicidade.objects.exists():
+            raise ValidationError('Já existe um Pix cadastrado. Para fazer mudanças, altere o Pix existente.')
+
+    def save(self, *args, **kwargs):
+        self.full_clean()
+        super().save(*args, **kwargs)
+
+    class Meta:
+        verbose_name = "Doação Pix QR Code (Felicidade Compartilhada)"
+        verbose_name_plural = "Doação Pix QR Code (Felicidade Compartilhada)"
+        
+class QRCodePixParceiros(models.Model):
     nome = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    imagem = models.ImageField(upload_to='doacao/')
+    imagem = models.ImageField(upload_to='doacaoParceiros/')
 
     def __str__(self):
         return self.nome
 
     class Meta:
-        verbose_name = "Doação Pix QR Code"
-        verbose_name_plural = "Doação Pix QR Code"
+        verbose_name = "Doação Pix QR Code (Parceiros)"
+        verbose_name_plural = "Doação Pix QR Code (Parceiros)"
